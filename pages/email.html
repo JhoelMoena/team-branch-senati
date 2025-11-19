@@ -6,3 +6,97 @@
     <title>Correo Institucional - SENATI</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
+                body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; 
+            color: #333; 
+            margin: 0;
+            padding: 0;
+        }
+        .email-header {
+            background-color: #0071bc; 
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .email-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .email-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .tab-container {
+            display: flex;
+            background-color: #e6f1fa;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        .tab:hover {
+            background-color: #d0e3f8; 
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: none;
+            font-weight: bold;
+            border-top: 2px solid #0071bc; 
+        }
+        .email-folder {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .email-folder h2 {
+            margin-top: 0;
+        }
+        .email-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        .email-item:hover {
+            background-color: #f1f1f1; 
+        }
+        .email-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .email-actions button {
+            background-color: #0071bc; 
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .email-actions button:hover {
+            background-color: #005fa3; 
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0071bc; 
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
