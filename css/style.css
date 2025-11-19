@@ -22,6 +22,10 @@ body {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Header */
 .header {
     background-color: var(--senati-blue);
