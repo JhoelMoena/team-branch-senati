@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Online - SENATI</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .service-module {
+            transition: transform 0.2s;
+        }
+        .service-module:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -26,7 +39,7 @@
     <main class="main-content">
         <div class="services-grid">
             <!-- Módulo 1: Correo Institucional -->
-            <div class="service-module">
+            <a href="email.html" class="service-module">
                 <div class="module-icon">
                     <div class="monitor-screen">
                         <div class="envelope-icon">
@@ -38,7 +51,7 @@
                     <h3 class="module-title">CORREO INSTITUCIONAL</h3>
                     <p class="module-description">Acceda a su correo institucional</p>
                 </div>
-            </div>
+            </a>
 
             <!-- Módulo 2: Biblioteca Online -->
             <div class="service-module">
