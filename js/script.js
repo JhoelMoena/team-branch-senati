@@ -101,7 +101,7 @@ function initServiceModules() {
         },
         'SOFTWARE ACADÉMICO': () => {
             // Redirigir a software académico
-            console.log('Accediendo a software académico...');
+            window.location.href = 'https://senatipe.sharepoint.com/sites/software_academico';
         }
     };
 
