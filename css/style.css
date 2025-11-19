@@ -97,6 +97,92 @@ body {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* Dropdown Menu */
+.dropdown-menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    max-width: 400px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+.menu-title {
+    color: var(--senati-blue);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--senati-light-blue);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-bottom: 8px;
+}
+
+.menu-list a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--senati-grey);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.menu-list a:hover {
+    background: var(--senati-light-blue);
+    color: var(--senati-blue);
+    transform: translateX(5px);
+}
+
+.menu-list a:active {
+    transform: translateX(3px);
+}
+
+/* Overlay para cerrar el menú al hacer clic fuera */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Main Content */
 .main-content {
     padding: 60px 40px;
@@ -616,5 +702,13 @@ body {
     
     .campus-description {
         font-size: 1rem;
+    }
+
+    .dropdown-menu {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
     }
 }

@@ -1,15 +1,73 @@
 // Menú Hamburguesa
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
     let menuOpen = false;
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
+    // Crear overlay si no existe
+    let menuOverlay = document.querySelector('.menu-overlay');
+    if (!menuOverlay) {
+        menuOverlay = document.createElement('div');
+        menuOverlay.className = 'menu-overlay';
+        document.body.appendChild(menuOverlay);
+    }
+
+    if (menuToggle && dropdownMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             menuOpen = !menuOpen;
             menuToggle.classList.toggle('active', menuOpen);
-            
-            // Aquí puedes agregar la funcionalidad del menú desplegable
-            console.log('Menú ' + (menuOpen ? 'abierto' : 'cerrado'));
+            dropdownMenu.classList.toggle('active', menuOpen);
+            menuOverlay.classList.toggle('active', menuOpen);
+        });
+
+        // Cerrar menú al hacer clic en el overlay
+        menuOverlay.addEventListener('click', function() {
+            menuOpen = false;
+            menuToggle.classList.remove('active');
+            dropdownMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace del menú
+        const menuLinks = dropdownMenu.querySelectorAll('a[data-module]');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const moduleName = this.getAttribute('data-module');
+                
+                // Cerrar el menú
+                menuOpen = false;
+                menuToggle.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                
+                // Ejecutar la acción del módulo correspondiente
+                const modules = {
+                    'CORREO INSTITUCIONAL': () => {
+                        console.log('Accediendo a correo institucional...');
+                    },
+                    'BIBLIOTECA ONLINE': () => {
+                        console.log('Accediendo a biblioteca online...');
+                    },
+                    'BLACKBOARD': () => {
+                        console.log('Accediendo a Blackboard...');
+                    },
+                    'BIBLIOTECA DE PROYECTOS': () => {
+                        console.log('Accediendo a biblioteca de proyectos...');
+                    },
+                    'SENATI - YOUTUBE': () => {
+                        console.log('Accediendo a YouTube de SENATI...');
+                    },
+                    'SOFTWARE ACADÉMICO': () => {
+                        window.location.href = 'https://senatipe.sharepoint.com/sites/software_academico';
+                    }
+                };
+                
+                if (modules[moduleName]) {
+                    modules[moduleName]();
+                }
+            });
         });
     }
 
