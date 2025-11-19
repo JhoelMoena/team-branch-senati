@@ -93,7 +93,7 @@ function initServiceModules() {
         },
         'COMPLEMENTACIÓN O TITULACIÓN': () => {
             // Redirigir a complementación o titulación
-            console.log('Accediendo a complementación o titulación...');
+            window.location.href = 'complementacion_titulacion.html';
         },
         'SENATI - YOUTUBE': () => {
             // Redirigir a YouTube de SENATI
