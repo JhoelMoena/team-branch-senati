@@ -1,0 +1,474 @@
+.page-header {
+    background: linear-gradient(135deg, var(--senati-blue) 0%, var(--senati-dark-blue) 100%);
+    color: var(--white);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid var(--senati-blue);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+    color: var(--senati-blue);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--senati-light-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    color: var(--senati-grey);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--senati-grey);
+}
+
+.info-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--senati-blue);
+    font-weight: bold;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--senati-blue);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: var(--senati-dark-blue);
+}
+
+.btn-back::before {
+    content: '←';
+    font-size: 1.2rem;
+}
+
+/* Search Section */
+.search-section {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+    color: var(--senati-blue);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--senati-blue);
+}
+
+.search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--senati-blue) 0%, var(--senati-dark-blue) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-container label {
+    color: var(--senati-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.filter-select {
+    flex: 1;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--senati-blue);
+}
+
+/* Careers Section */
+.careers-section {
+    margin-top: 40px;
+}
+
+.careers-section h2 {
+    color: var(--senati-blue);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.career-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid var(--senati-blue);
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.career-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.career-card h3 {
+    color: var(--senati-blue);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.career-duration {
+    color: var(--senati-grey);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.career-description {
+    color: var(--senati-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.btn-view {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--senati-blue) 0%, var(--senati-dark-blue) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.4);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s;
+    position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--senati-grey);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--senati-blue);
+}
+
+.modal-content h2 {
+    color: var(--senati-blue);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-right: 40px;
+}
+
+.curriculum-info h3 {
+    color: var(--senati-blue);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.module-item {
+    background: var(--senati-light-blue);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid var(--senati-blue);
+    transition: transform 0.2s;
+}
+
+.module-item:hover {
+    transform: translateX(5px);
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.module-number {
+    width: 35px;
+    height: 35px;
+    background: var(--senati-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.module-header h4 {
+    color: var(--senati-blue);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.module-details {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.semester-badge,
+.hours-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.semester-badge {
+    background: var(--senati-blue);
+    color: var(--white);
+}
+
+.hours-badge {
+    background: var(--white);
+    color: var(--senati-blue);
+    border: 2px solid var(--senati-blue);
+}
+
+.curriculum-summary {
+    background: var(--senati-light-blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid var(--senati-blue);
+}
+
+.curriculum-summary p {
+    color: var(--senati-grey);
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.curriculum-summary strong {
+    color: var(--senati-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 40px 20px;
+    }
+
+    .search-section {
+        padding: 30px 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-select {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .careers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 10% auto;
+    }
+
+    .module-details {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

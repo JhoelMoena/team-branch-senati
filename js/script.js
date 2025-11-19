@@ -85,7 +85,7 @@ function initServiceModules() {
         },
         'DISEÑOS CURRICULARES': () => {
             // Redirigir a diseños curriculares
-            console.log('Accediendo a diseños curriculares...');
+            window.location.href = 'diseños_curriculares.html';
         },
         'BIBLIOTECA DE PROYECTOS': () => {
             // Redirigir a biblioteca de proyectos
